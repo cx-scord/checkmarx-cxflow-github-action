@@ -70,7 +70,6 @@ runs:
     - ${{ inputs.break_build }}
     - ${{ inputs.params }}
     - ${{ inputs.github_token }}
-    - ${{ inputs.scanner }}
   env:
     TEAM: "${{ inputs.team }}"
     PROJECT: ${{ inputs.project }}
