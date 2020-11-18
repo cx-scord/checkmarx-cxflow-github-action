@@ -50,6 +50,10 @@ inputs:
     required: false
     default: ''
     description: 'GitHub API Token'
+  scanner:
+    required: true
+    default: sast
+    description: 'Vulnerability Scanner'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -66,6 +70,7 @@ runs:
     - ${{ inputs.break_build }}
     - ${{ inputs.params }}
     - ${{ inputs.github_token }}
+    - ${{ inputs.scanner }}
   env:
     TEAM: "${{ inputs.team }}"
     PROJECT: ${{ inputs.project }}
@@ -79,6 +84,7 @@ runs:
     CX_FLOW_BREAK_BUILD: ${{ inputs.break_build }}
     CXFLOW_PARAMS: ${{ inputs.params }}
     GITHUB_TOKEN: ${{ inputs.github_token }}
+    SCANNER: ${{ inputs.scanner }}
 branding:
   icon: 'check'
   color: 'green'
