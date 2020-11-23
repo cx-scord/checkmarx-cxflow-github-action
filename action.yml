@@ -61,7 +61,7 @@ inputs:
   sca_app_url:
     required: false
     description: 'Provide SCA APP URL'
-    default: ''
+    default: 'https://sca.scacheckmarx.com'
   sca_access_control_url:
     required: false
     description: 'Provide SCA Access Control URL'

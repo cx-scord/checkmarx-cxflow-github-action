@@ -1,5 +1,5 @@
 sca:
-  appUrl: https://sca.scacheckmarx.com
+  appUrl: ${SCA_APP_URL}
   apiUrl: https://api.scacheckmarx.com
   accessControlUrl: https://platform.checkmarx.net
   tenant: ${SCA_TENANT}
