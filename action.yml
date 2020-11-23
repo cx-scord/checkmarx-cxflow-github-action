@@ -54,6 +54,30 @@ inputs:
     required: true
     default: sast
     description: 'Vulnerability Scanner'
+  sca_api_url:
+    required: false
+    description: 'Provide SCA API URL'
+    default: ''
+  sca_app_url:
+    required: false
+    description: 'Provide SCA APP URL'
+    default: ''
+  sca_access_control_url:
+    required: false
+    description: 'Provide SCA Access Control URL'
+    default: ''
+  sca_tenant:
+    required: false
+    description: 'Provide SCA Tenant'
+    default: ''
+  sca_username:
+    required: false
+    description: 'Provide SCA Username'
+    default: ''
+  sca_password:
+    required: false
+    description: 'Provide SCA Password'
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -70,6 +94,12 @@ runs:
     - ${{ inputs.break_build }}
     - ${{ inputs.params }}
     - ${{ inputs.github_token }}
+    - ${{ inputs.sca_api_url }}
+    - ${{ inputs.sca_app_url }}
+    - ${{ inputs.sca_access_control_url }}
+    - ${{ inputs.sca_tenant }}
+    - ${{ inputs.sca_username }}
+    - ${{ inputs.sca_password }}
   env:
     TEAM: "${{ inputs.team }}"
     PROJECT: ${{ inputs.project }}
@@ -84,6 +114,13 @@ runs:
     CXFLOW_PARAMS: ${{ inputs.params }}
     GITHUB_TOKEN: ${{ inputs.github_token }}
     SCANNER: ${{ inputs.scanner }}
+    SCA_API_URL: ${{ inputs.sca_api_url }}
+    SCA_APP_URL: ${{ inputs.sca_app_url }}
+    SCA_ACCESS_CONTROL_URL: ${{ inputs.sca_access_control_url }}
+    SCA_TENANT: ${{ inputs.sca_tenant }}
+    SCA_USERNAME: ${{ inputs.sca_username }}
+    SCA_PASSWORD: ${{ inputs.sca_password }}
+
 branding:
   icon: 'check'
   color: 'green'
