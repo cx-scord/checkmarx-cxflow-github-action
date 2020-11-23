@@ -78,6 +78,10 @@ inputs:
     required: false
     description: 'Provide SCA Password'
     default: ''
+  cxgo_client_secret:
+    required: false
+    description: 'Provide CXGO Client Secret Password'
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -101,6 +105,8 @@ runs:
     - ${{ inputs.sca_tenant }}
     - ${{ inputs.sca_username }}
     - ${{ inputs.sca_password }}
+    - ${{ inputs.cxgo_client_secret }}
+
   env:
     TEAM: "${{ inputs.team }}"
     PROJECT: ${{ inputs.project }}
@@ -121,6 +127,7 @@ runs:
     SCA_TENANT: ${{ inputs.sca_tenant }}
     SCA_USERNAME: ${{ inputs.sca_username }}
     SCA_PASSWORD: ${{ inputs.sca_password }}
+    CXGO_CLIENT_SECRET: ${{ inputs.cxgo_client_secret }}
 
 branding:
   icon: 'check'
