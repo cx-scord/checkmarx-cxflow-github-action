@@ -94,6 +94,7 @@ runs:
     - ${{ inputs.break_build }}
     - ${{ inputs.params }}
     - ${{ inputs.github_token }}
+    - ${{ inputs.scanner }}
     - ${{ inputs.sca_api_url }}
     - ${{ inputs.sca_app_url }}
     - ${{ inputs.sca_access_control_url }}
