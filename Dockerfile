@@ -7,6 +7,7 @@ COPY entrypoint.sh /app/entrypoint.sh
 COPY application.yml /app/application.yml
 COPY application-sast.yml /app/application-sast.yml
 COPY application-sca.yml /app/application-sca.yml
+COPY application-cxgo.yml /app/application-cxgo.yml
 #Make it executable
 RUN chmod +x /app/entrypoint.sh
 ENTRYPOINT ["/app/entrypoint.sh"]
