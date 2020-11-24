@@ -17,7 +17,7 @@ cx-flow:
   mitre-url: https://cwe.mitre.org/data/definitions/%s.html
   zip-exclude: ""
   break-build: false
-  enabled-vulnerability-scanners: ${SCANNER}
+  enabled-vulnerability-scanners: ${SCANNERS}
 
 github:
   url: https://github.com

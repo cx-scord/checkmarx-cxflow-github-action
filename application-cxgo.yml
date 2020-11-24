@@ -1,7 +1,7 @@
 cxgo:
   client-secret: ${CXGO_CLIENT_SECRET}
-  base-url: https://api.checkmarx.net
-  portal-url: https://cloud.checkmarx.net
+  base-url: ${CXGO_BASE_URL}
+  portal-url: ${CXGO_PORTAL_URL}
   # CxOD Business unit that will contain the project/application/scan
   team: \Demo\CxFlow
   url: ${cxgo.base-url}
