@@ -86,12 +86,12 @@ inputs:
     default: ''
   cxgo_base_url:
     required: false
-    description: 'Provide CxGo App URL'
-    default: ''
+    description: 'Provide CxGo API URL'
+    default: 'https://api.checkmarx.net'
   cxgo_portal_url:
     required: false
     description: 'Provide CxGo Portal URL'
-    default: ''
+    default: 'https://cloud.checkmarx.net'
   ######### AST Properties ##########
   ast_api_url:
     required: false
